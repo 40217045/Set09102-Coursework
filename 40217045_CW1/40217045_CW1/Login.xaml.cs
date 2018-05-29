@@ -28,7 +28,7 @@ namespace _40217045_CW1
         {
             InitializeComponent();
             LoadUsers();
-
+            
         }
 
         private void LoadUsers()
@@ -61,7 +61,7 @@ namespace _40217045_CW1
             cvsNewUser.Visibility = Visibility.Visible;
         }
 
-
+       
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
@@ -71,14 +71,14 @@ namespace _40217045_CW1
             txtTwitter.Clear();
 
             txtUsername.Clear();
-
+            
             cvsNewUser.Visibility = Visibility.Hidden;
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             User u = new User();
-            double phone = 0;
+            double phone=0;
             try
             {
                 phone = double.Parse(txtPhone.Text);
@@ -102,11 +102,11 @@ namespace _40217045_CW1
                 txtUsername.Clear();
                 cvsNewUser.Visibility = Visibility.Hidden;
             }
-            catch (Exception UserError)
+            catch(Exception UserError)
             {
                 MessageBox.Show(UserError.ToString());
             }
-
+           
 
         }
 
